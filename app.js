@@ -1,6 +1,16 @@
 var express = require('express');
 var app = express();
 
+var soap = require('soap');
+
+var request = require('request');
+request.defaults({
+    strictSSL: false, // allow us to use our self-signed cert for testing
+    rejectUnauthorized: false
+});
+app.use(express.bodyParser());
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 
 //Plain text response
 app.get('/', function(req, res) {
