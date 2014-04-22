@@ -2,9 +2,9 @@ express-rest-api-nodejs
 =======================
 
 
-clone repository
+clone this repository
 
-and run
+and then run
 
 npm install
 
